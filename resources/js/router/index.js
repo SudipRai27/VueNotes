@@ -3,13 +3,15 @@ import VueRouter from "vue-router";
 
 import auth from "./routes/auth";
 import home from "./routes/home";
-import dashboard from "./routes/dashboard";
+import note from "./routes/note";
 import errors from "./routes/errors";
+import course from "./routes/course";
+import dashboard from "./routes/dashboard";
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    routes: [...auth, ...home, ...dashboard, ...errors],
+    routes: [...auth, ...home, ...dashboard, ...note, ...errors, ...course],
     mode: "history"
 });
 

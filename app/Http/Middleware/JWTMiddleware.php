@@ -26,6 +26,9 @@ class JWTMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        if (!$request->wantsJson()) {
+            abort('401');
+        }
         try {
             if (!$this->auth->parser()->setRequest($request)->hasToken()) {
                 return response()->json([

@@ -44,6 +44,29 @@
                 class="nav-link"
                 href="#"
                 role="button"
+                :to="{ name: 'note' }"
+              >
+                Note Datable
+              </router-link>
+            </li>
+            <li class="nav-item dropdown">
+              <router-link
+                id="navbarDropdown"
+                class="nav-link"
+                href="#"
+                role="button"
+                :to="{ name: 'course' }"
+              >
+                Course Filter
+              </router-link>
+            </li>
+
+            <li class="nav-item dropdown">
+              <router-link
+                id="navbarDropdown"
+                class="nav-link"
+                href="#"
+                role="button"
                 :to="{ name: 'dashboard' }"
               >
                 Dashboard
